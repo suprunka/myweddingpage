@@ -1,0 +1,2 @@
+export const SET_PAGE_SIZE= "SET_PAGE_SIZE"
+export const SET_PAGE_NUMBER = "SET_PAGE_NUMBER"
