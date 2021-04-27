@@ -12,7 +12,7 @@ const Selection =()=>
  <div id="imgs">
     <Deck/>
 
-    </div>
+    </div>    
 </Selector>
 </Container>
 </React.Fragment>
