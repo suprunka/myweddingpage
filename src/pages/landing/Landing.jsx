@@ -8,18 +8,21 @@ import PicsFeed from '../picsfeed'
 import Contact from '../Contact'
 import Directions from '../map'
 import Invitation from '../Invitation'
+import News from '../News/News'
+import WelcomeSelectionMobile from '../welcomMobile/WelcomSelectionMobile'
 
 
 const Landing = ()=>{
     const welcomRef = useRef(null)
+    const welcomMobileRef = useRef(null)
     // const aboutRef = useRef(null)
     const historyRef = useRef(null)
     const directionsRef = useRef(null)
     const contactRef = useRef(null)
    
     const list = [
-                 {label:"Cześć", ref:welcomRef},
-                //  {label:"Po co ", ref:aboutRef}, 
+        {label:"Cześć", ref:welcomRef, refMobile:welcomMobileRef},
+        //  {label:"Po co ", ref:aboutRef}, 
                  {label:"Nasza historia ", ref:historyRef},
                  {label:"Kontakt ", ref:contactRef},
                 ]
@@ -29,8 +32,10 @@ const Landing = ()=>{
    
             <Navbar list={list}/>
             <WelcomeSelection ref={welcomRef} />
-            <About map={directionsRef}  info={contactRef} />
+            <WelcomeSelectionMobile ref={welcomMobileRef} />
             <Invitation/>
+            <About map={directionsRef}  info={contactRef} />
+            <News/>
             <History ref={historyRef} />
             <PicsFeed  /> 
              <Contact ref={contactRef} />

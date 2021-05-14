@@ -3,7 +3,7 @@ import { Col, Row } from 'reactstrap';
 
 
 const Form = () =>
-<form className="contactForm">
+<form action="mailto:patrycja.suprun@gmail.com" method="post" enctype="text/plain" className="contactForm">
     <Row>
         <Col sm={6}>
         <input placeholder="Twoje imie" className="contactInput" type="text"/>
@@ -21,6 +21,10 @@ const Form = () =>
     <Row>
         <Col>
             <textarea placeholder="Wiadomosc do nas" rows="6" className="contactInput"></textarea>
+        </Col>
+    </Row> <Row>
+        <Col>
+        <button type="submit">Wyslij!</button>
         </Col>
     </Row>
 </form>
