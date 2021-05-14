@@ -13,7 +13,7 @@ const Navbar = ({list}) =>{
    
     useEffect(() => {
         if(active !== undefined)
-        if(isMobile)
+        if(isMobile && list[active].refMobile !== undefined)
             list[active].refMobile.current.scrollIntoView({behavior: 'smooth'});
         else
             list[active].ref.current.scrollIntoView({behavior: 'smooth'});
