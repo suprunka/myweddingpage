@@ -36,7 +36,7 @@ const Selection = React.forwardRef((props, ref) =>
 
 
 </Col> 
-<Col sm={6}>
+<Col sm={12}>
     <h2 data-aos="fade-right">W razie pytań pisz do nas!</h2>
    <Form/>
 </Col>

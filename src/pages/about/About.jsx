@@ -58,7 +58,10 @@ return(
 <p className="imgSignature">Prezenty</p>
 {clicked === 2 &&
 <p className="aboutBottom">
- Prosimy o zastąpienie kwiatów/alkoholu zdrapkami i kuponami lotto!
+Drodzy goście, Państwo mili
+Byście radość nam sprawili,
+Po co dźwigać bukieciki,
+lepsze Lotto kuponiki.
 </p>}
 
 </Col>

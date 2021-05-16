@@ -21,10 +21,10 @@ const Landing = ()=>{
     const contactRef = useRef(null)
    
     const list = [
-        {label:"Cześć", ref:welcomRef, refMobile:welcomMobileRef},
-        //  {label:"Po co ", ref:aboutRef}, 
+                 {label:"Cześć", ref:welcomRef, refMobile:welcomMobileRef},
                  {label:"Nasza historia ", ref:historyRef},
                  {label:"Kontakt ", ref:contactRef},
+                 {label:"Dojazd ", ref:directionsRef},
                 ]
   
     return(
@@ -38,8 +38,9 @@ const Landing = ()=>{
             <History ref={historyRef} />
             <News/>
             <PicsFeed  /> 
-             <Contact ref={contactRef} />
             <Directions  ref={directionsRef} />
+            <Contact ref={contactRef} />
+
         </React.Fragment>
     )
 }
