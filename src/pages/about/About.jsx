@@ -40,20 +40,20 @@ return(
  <Selector  >
 
 <Row id="aboutSection">
-<Col className="hoverableIcon" data-aos="zoom-in" data-aos-duration="1300" onClick={()=>handleClick(0)} sm={6} md={4}  xl={4}>
+<Col className="hoverableIcon" data-aos="zoom-in" data-aos-duration="1000" onClick={()=>handleClick(0)} sm={6} md={4}  xl={4}>
 
 <FontAwesomeIcon size="4x" icon={faUsers} />
 <p className="imgSignature">Usiedzenie gości przy stołach</p>
 {clicked === 0 &&
 <p className="aboutBottom">Usiedzenie gości przy stołach zostanie dodane tydzień przed przyjeciem.</p>}
 </Col> 
-<Col className="hoverableIcon" data-aos="zoom-in"  data-aos-duration="1300" key={1} onClick={()=>handleClick(1)} sm={6} md={4} xl={4}>
+<Col className="hoverableIcon" data-aos="zoom-in"  data-aos-duration="1000" key={1} onClick={()=>handleClick(1)} sm={6} md={4} xl={4}>
 <FontAwesomeIcon size="4x" icon={faCameraRetro} />
 <p className="imgSignature">Zdjęcia z wesela</p>
 {clicked === 1 &&
 <p className="aboutBottom">Zdjęcia będą chronione hasłem. Dodamy je, jak tylko je dostaniemy. Badź cierpliwy!</p>}
 </Col>
-<Col className="hoverableIcon" data-aos="zoom-in"  data-aos-duration="1300" onClick={()=>handleClick(2)} sm={6} md={4} xl={4}>
+<Col className="hoverableIcon" data-aos="zoom-in"  data-aos-duration="1000" onClick={()=>handleClick(2)} sm={6} md={4} xl={4}>
 <FontAwesomeIcon size="4x" icon={faGift} />
 <p className="imgSignature">Prezenty</p>
 {clicked === 2 &&
@@ -66,16 +66,16 @@ lepsze Lotto kuponiki.
 
 </Col>
 
-<Col className="hoverableIcon" data-aos="zoom-in" data-aos-duration="1300" onClick={()=>handleClick(4)} sm={6} md={4} xl={4}>
+<Col className="hoverableIcon" data-aos="zoom-in" data-aos-duration="1000" onClick={()=>handleClick(4)} sm={6} md={4} xl={4}>
 <FontAwesomeIcon size="4x" icon={faMapSigns} />
 <p className="imgSignature">Jak dojechać</p>
     </Col>
 
-    <Col className="hoverableIcon" data-aos="zoom-in" data-aos-duration="1300" i onClick={()=>handleClick(3)} sm={6} md={4} xl={4}>
+    <Col className="hoverableIcon" data-aos="zoom-in" data-aos-duration="1000" i onClick={()=>handleClick(3)} sm={6} md={4} xl={4}>
 <FontAwesomeIcon size="4x" icon={faPhoneSquareAlt} />
 <p className="imgSignature">Kontakt</p>
 </Col>
-<Col className="hoverableIcon" data-aos="zoom-in" data-aos-duration="1300" onClick={()=>handleClick(5)} sm={6} md={4} xl={4}>
+<Col className="hoverableIcon" data-aos="zoom-in" data-aos-duration="1000" onClick={()=>handleClick(5)} sm={6} md={4} xl={4}>
 <FontAwesomeIcon size="4x" icon={faInfoCircle} />
 <p className="imgSignature">Wazne informacje</p>
 </Col>
