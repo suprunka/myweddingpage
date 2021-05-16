@@ -7,15 +7,18 @@ const News = ()=>
  <Selector >
      
 
+<p>Spod koscioła zapewniamy autokar, który dowiezie gości do sali weselnej
+ oraz odwiezie Was bezpiecznie do domu po zakończeniu przyjęcia.
+</p>
 <p>
-
-Spod kosciola zapewniamy autokar, ktory dowiezie gosci do sali weselnej
- oraz dowiezie Was bezpiecznie do domu po zakonczeniu przyjecia.
+    Wegani wegetranie- alergie-
 </p>
 <p>
 Polecane noclegi w okolicy:
--,
--,
+<ul>
+<li>- Agroturystyka</li>
+</ul>
+
 </p>
 
    

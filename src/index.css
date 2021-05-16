@@ -242,10 +242,7 @@ p.lineHeader {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-.contactForm >.row{
-  margin-bottom: 1.5rem  !important;
-  margin-top: 1.5rem !important;
-}
+
 .contactInput{
   font-family: "Castoro";
   width: 100%;
@@ -255,6 +252,7 @@ p.lineHeader {
   border-bottom: 2px solid #cec1b7;
   background-color: #e2d0c1;
   color:rgb(61, 61, 61);
+  margin-bottom: 1.5rem;
 }
 .contactForm{
   margin-top: 5rem;
@@ -480,11 +478,24 @@ input:focus{
   text-align-last: center;
 }
 .transparentWhiteBg{
-    background-color: #fff0f07d;
+    background-color: #0f0e0ea1;
 }
 .font-M{
   font-family: Montserrat;
 }
 .height-fitCnt{
    min-height: fit-content;
+}
+.submitButton{
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  width: 100%;
+  background-color: #e2d0c1;
+  color: white;
+  padding: 10px;
+  border-bottom: 2px solid #cec1b7;
+}
+.submitButton:focus, .submitButton:active{
+  border: 1px solid #cec1b7;
+  background-color: #c7b2a1;
 }

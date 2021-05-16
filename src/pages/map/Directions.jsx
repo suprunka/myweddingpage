@@ -3,12 +3,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
 import { Col, Row } from 'reactstrap';
 import Container from '../../components/Container'
-
+// import {isMobile} from ""
 const Directions = React.forwardRef((props, ref) => 
-<Container backgroundColor="#fff">
-    <div ref={ref} >
+<Container 
+    
+    backgroundColor="#fff"
+    >
+    <div ref={ref}  className="biggerPadding" >
 
-    <Row>
+    <Row  >
     <Col sm={6}>
             <Row>
             <Col sm={12} >
@@ -17,7 +20,7 @@ const Directions = React.forwardRef((props, ref) =>
          className="hoverableIcon m-0 mr-2 fa-2x" 
          icon={faChurch}
          /> 
-         Jak dojechac do kosciola?
+         Jak dojechać do koscioła?
          </p>
     </Col>
             </Row>
@@ -37,7 +40,7 @@ const Directions = React.forwardRef((props, ref) =>
     className="hoverableIcon m-0  mr-2 fa-2x" 
     icon={faGlassCheers}
     /> 
-    Jak dojechac na sale weselna?
+    Jak dojechać na sale weselną?
     </p>
     </Col>
   

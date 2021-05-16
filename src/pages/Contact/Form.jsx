@@ -24,7 +24,7 @@ const Form = () =>
         </Col>
     </Row> <Row>
         <Col>
-        <button type="submit">Wyslij!</button>
+        <button className="submitButton" type="submit">Wyslij!</button>
         </Col>
     </Row>
 </form>

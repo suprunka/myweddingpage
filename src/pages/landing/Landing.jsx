@@ -35,8 +35,8 @@ const Landing = ()=>{
             <WelcomeSelectionMobile ref={welcomMobileRef} />
             <Invitation/>
             <About map={directionsRef}  info={contactRef} />
-            <News/>
             <History ref={historyRef} />
+            <News/>
             <PicsFeed  /> 
              <Contact ref={contactRef} />
             <Directions  ref={directionsRef} />
