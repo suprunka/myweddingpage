@@ -451,9 +451,9 @@ input:focus{
     /* font-family: Aerotis; */
     font-size: 1.13rem;
   }
-  .invitation{
+  /* .invitation{
     margin-top: 10vh;
-  }
+  } */
 }
 @media screen and (min-width: 900px) {
   .signature{

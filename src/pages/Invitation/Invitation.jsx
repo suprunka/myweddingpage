@@ -3,8 +3,8 @@ import Container from '../../components/Container';
 import Selector from '../../components/Selector';
 import logo from "../../assets/logopat.jpg"
 const Invitation = ()=>
-<Container backgroundColor="#fefdfb">
- <Selector className="invitation">
+<Container backgroundColor="#fefdfb" className="height-fitCnt">
+ <Selector className="invitation ">
  <p> Już wkrótce powiemy sobie <span className="handwrittenText">„TAK”</span> </p>
 
 <p> 14 sierpnia 2021 roku o godzinie  16:00 </p> 
