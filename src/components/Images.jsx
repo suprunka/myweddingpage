@@ -6,7 +6,7 @@ import { useGesture } from 'react-with-gesture'
 import p1 from "../../src/assets/pics/12.jpg"
 import p2 from "../../src/assets/pics/13.jpg"
 import p3 from "../../src/assets/pics/14.jpg"
-import p4 from "../../src/assets/pics/22.jpg"
+import p4 from "../../src/assets/pics/22c.jpg"
 import p5 from "../../src/assets/pics/16.jpg"
 import p6 from "../../src/assets/pics/17.jpg"
 import p7 from "../../src/assets/pics/18mm.jpg"
@@ -18,6 +18,7 @@ import p12 from "../../src/assets/pics/25.jpg"
 import p13 from "../../src/assets/pics/26.jpg"
 import p15 from "../../src/assets/pics/27.jpg"
 import p14 from "../../src/assets/pics/15m.jpg"
+import p16 from "../../src/assets/pics/31.jpg"
 
 
 
@@ -58,7 +59,7 @@ import p14 from "../../src/assets/pics/15m.jpg"
 //   })
 //   return <animated.div {...bind()} style={{ transform: xy.interpolate((x, y) => `translate3d(${x}px,${y}px,0)`) }} />
 // }
-const cards = [p1, p2, p3, p4, p5, p6, p7,p8, p9, p10, p11, p12, p13, p14,p15]
+const cards = [p1, p2, p16, p3, p5, p6, p7,p8, p9, p10, p11, p12, p13,p4,p15, p14]
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
 const toD = i => ({ x: 0, y: i * -4, scale: 1, rot: -10 + Math.random() * 20, delay: i * 100 })
