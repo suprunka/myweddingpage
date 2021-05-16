@@ -212,6 +212,9 @@ p.lineHeader {
     .mt-8{
       margin-top: 8vh;
       }
+.mt-2{
+  margin-top: 2vh;;
+}
 
     h1{
       font-size: 4rem  !important;
@@ -255,7 +258,7 @@ p.lineHeader {
   margin-bottom: 1.5rem;
 }
 .contactForm{
-  margin-top: 5rem;
+  margin-top: 6vh;
 }
 input:focus{
   outline: 0px;

@@ -16,7 +16,7 @@ const Selection = React.forwardRef((props, ref) =>
 <Col sm={1}></Col>
 
 <Col sm={5}
-data-aos="fade-left"
+data-aos="fade-right" 
 data-aos-offset="500"
 data-aos-duration="1500"
  className="transparentWhiteBg" >
@@ -26,7 +26,7 @@ data-aos-duration="1500"
     <h2 data-aos="fade-right ">
     Razem nawet na koniec świata!
     </h2>
-    <p className="mt-4 ">
+    <p className="mt-4 " data-aos="fade-right ">
     Ona, pilna uczennica, on szalony urwis- poznali się w szkole,
 a chwilę poźniej wyjechali do Danii w pogoni za grubą kasą i sławą.
 Niestety, ani kasy, ani sławy nie zdobyli, ale posiadają cos ważniejszego-

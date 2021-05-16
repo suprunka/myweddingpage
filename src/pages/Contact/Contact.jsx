@@ -3,8 +3,10 @@ import { Row, Col } from 'reactstrap'
 import Container from '../../components/Container'
 import Selector from "../../components/Selector"
 import Form from './Form';
-import patkaimg1 from "../../assets/pics/11.jpg"
-import patkaimg2 from "../../assets/pics/12.jpg"
+import patkaimg1 from "../../assets/pics/patka1.jpg"
+import patkaimg2 from "../../assets/pics/patka3.jpg"
+import marcinimg1 from "../../assets/pics/marcin1.jpg"
+
 const Selection = React.forwardRef((props, ref) => 
 <React.Fragment>
 
@@ -13,11 +15,11 @@ const Selection = React.forwardRef((props, ref) =>
 
  <Selector>
 <Row >
-<Col sm={6} className="biggerPadding">
+<Col sm={6} >
   
-    <h3 className="pt-4 text-center" data-aos="fade-right"  style={{color:"#e48432"}}>
+    <h4 className="pt-4 " data-aos="fade-right"  style={{color:"#e48432"}}>
         BEZPOŚREDNI KONTAKT:
-    </h3>
+    </h4>
     <Row className="mt-6">
 
         <Col sm={12} md={12} style={{display:"flex"}}>
@@ -35,7 +37,7 @@ const Selection = React.forwardRef((props, ref) =>
         </Col>
         <Col sm={12} md={12} style={{display:"flex"}}>
         <div class="bussinessCard">
-            <img className="image" alt="" src={patkaimg1} style={{width:"100px", height:"100px", marginRight:"10px"}}/>
+            <img className="image" alt="" src={marcinimg1} style={{width:"100px", height:"100px", marginRight:"10px"}}/>
             <div class="overlay">
                 <img alt="" className="image" src={patkaimg2} style={{width:"100px", height:"100px", marginRight:"10px"}}/>
              </div>
@@ -54,7 +56,9 @@ const Selection = React.forwardRef((props, ref) =>
 
 </Col> 
 <Col sm={6}>
-    <h2 data-aos="fade-right">W razie pytań pisz do nas!</h2>
+    <h4 className="pt-4 text-center" data-aos="fade-right"  style={{color:"#e48432"}}>
+        W RAZIE PYTAŃ PISZ DO NAS
+    </h4>
    <Form/>
 </Col>
 </Row>
