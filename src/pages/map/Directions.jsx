@@ -6,7 +6,7 @@ import Container from '../../components/Container'
 // import {isMobile} from ""
 const Directions = React.forwardRef((props, ref) => 
 <Container 
-    
+    className="height-fitCnt"
     backgroundColor="#fff"
     >
     <div ref={ref}  className="biggerPadding" >

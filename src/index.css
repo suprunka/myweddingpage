@@ -499,3 +499,30 @@ input:focus{
   border: 1px solid #cec1b7;
   background-color: #c7b2a1;
 }
+.bussinessCard {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+
+}
+
+.bussinessCard:hover .overlay {
+  opacity: 1;
+}
