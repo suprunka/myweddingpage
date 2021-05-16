@@ -616,3 +616,11 @@ background-color: #232121;
   background-position: top right;
 }
 }
+.error{
+  font-size: 10px;
+    margin-top: -10px;
+    position: relative;
+    top: -1.4rem;
+    margin-left: 10px;
+    color: #b50b0b;
+}
