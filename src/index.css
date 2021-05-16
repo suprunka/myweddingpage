@@ -528,3 +528,91 @@ input:focus{
 .bussinessCard:hover .overlay {
   opacity: 1;
 }
+.skipBtn{
+  text-align: center;
+  position: relative;
+  top: 30%;
+  z-index: 10;
+}
+.shimmer{
+  font-size: medium;
+  color: rgb(255 99 20 / 22%);
+  font-stretch: ultra-condensed;
+}
+.shimmer {
+/* the shimmer magic */
+background: -webkit-gradient(linear,left top,right top,from(#222),to(#222),color-stop(.5,#f8c97e));
+background: -moz-gradient(linear,left top,right top,from(#222),to(#222),color-stop(.5,#f8c97e));
+background: gradient(linear,left top,right top,from(#222),to(#222),color-stop(.5,#f8c97e));
+-webkit-background-size: 125px 100%;
+-moz-background-size: 125px 100%;
+background-size: 125px 100%;
+-webkit-background-clip: text;
+-moz-background-clip: text;
+background-clip: text;
+-webkit-animation-name: shimmer;
+-moz-animation-name: shimmer;
+-webkit-animation-name: shimmer;
+animation-name: shimmer;
+-webkit-animation-duration: 2s;
+-moz-animation-duration: 2s;
+-webkit-animation-duration: 2s;
+animation-duration: 2s;
+-webkit-animation-iteration-count: infinite;
+-moz-animation-iteration-count: infinite;
+-webkit-animation-iteration-count: infinite;
+animation-iteration-count: infinite;
+background-repeat: no-repeat;
+background-position: 0 0;
+background-color: #232121;
+}
+
+@-moz-keyframes shimmer {
+0% {
+  background-position: top left;
+}
+
+100% {
+  background-position: top right;
+}
+}
+
+@-webkit-keyframes shimmer {
+0% {
+  background-position: top left;
+}
+
+100% {
+  background-position: top right;
+}
+}
+
+@-o-keyframes shimmer {
+0% {
+  background-position: top left;
+}
+
+100% {
+  background-position: top right;
+}
+}
+
+@-ms-keyframes shimmer {
+0% {
+  background-position: top left;
+}
+
+100% {
+  background-position: top right;
+}
+}
+
+@keyframes shimmer {
+0% {
+  background-position: top left;
+}
+
+100% {
+  background-position: top right;
+}
+}

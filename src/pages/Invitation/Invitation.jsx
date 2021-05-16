@@ -21,6 +21,7 @@ Po ślubie widzimy Was na przyjeciu w Sali weselnej „Gościniec za Borem”
 w Zaborowicach.
 </p>
 
+
 <img src={logo} style={{width:"200px"}}/>
 
    

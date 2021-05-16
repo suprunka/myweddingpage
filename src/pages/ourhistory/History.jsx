@@ -17,8 +17,8 @@ const Selection = React.forwardRef((props, ref) =>
 
 <Col sm={5}
 data-aos="fade-right" 
-data-aos-offset="500"
-data-aos-duration="1500"
+data-aos-offset={isMobile? "0":"500"}
+data-aos-duration={isMobile? "0":"1500"}
  className="transparentWhiteBg" >
     <p data-aos="fade-right" style={{color:"#d07c3f"}}>
         NASZA HISTORIA

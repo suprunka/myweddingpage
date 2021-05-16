@@ -1,13 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Row, Col } from 'reactstrap'
 import Container from '../../components/Container'
 import Selector from "../../components/Selector"
 import Form from './Form';
 import patkaimg1 from "../../assets/pics/patka1.jpg"
 import patkaimg2 from "../../assets/pics/patka3.jpg"
+import marcinimg2 from "../../assets/pics/marcin2.jpg"
 import marcinimg1 from "../../assets/pics/marcin1.jpg"
 
-const Selection = React.forwardRef((props, ref) => 
+const Selection = React.forwardRef((props, ref) => {
+    const [mIndex, setMarcinImg] = useState(0)
+    const [pIndex, setPIndex] = useState(0)
+    const marcinImgs = [ marcinimg2, marcinimg1]
+    const patkaImgs = [patkaimg1, patkaimg2]
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+        setMarcinImg(img => img + 1);
+        setPIndex(img => img + 1);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+return(
 <React.Fragment>
 
 <Container backgroundColor="#fff">
@@ -24,7 +38,7 @@ const Selection = React.forwardRef((props, ref) =>
 
         <Col sm={12} md={12} style={{display:"flex"}}>
         <div class="bussinessCard">
-            <img className="image" alt="" src={patkaimg1} style={{width:"100px", height:"100px", marginRight:"10px"}}/>
+            <img className="image" alt="" src={patkaImgs[pIndex%2]}  style={{width:"100px", height:"100px", marginRight:"10px"}}/>
             <div class="overlay">
                 <img alt="" className="image" src={patkaimg2} style={{width:"100px", height:"100px", marginRight:"10px"}}/>
              </div>
@@ -37,9 +51,9 @@ const Selection = React.forwardRef((props, ref) =>
         </Col>
         <Col sm={12} md={12} style={{display:"flex"}}>
         <div class="bussinessCard">
-            <img className="image" alt="" src={marcinimg1} style={{width:"100px", height:"100px", marginRight:"10px"}}/>
+            <img className="image" alt="" src={marcinImgs[mIndex%2]} style={{width:"100px", height:"100px", marginRight:"10px"}}/>
             <div class="overlay">
-                <img alt="" className="image" src={patkaimg2} style={{width:"100px", height:"100px", marginRight:"10px"}}/>
+                <img alt="" className="image" src={marcinimg1} style={{width:"100px", height:"100px", marginRight:"10px"}}/>
              </div>
         </div>        <div>
         <p>Marcin</p>
@@ -66,5 +80,5 @@ const Selection = React.forwardRef((props, ref) =>
 </div>
 </Container>
 </React.Fragment>
-)
+)})
 export default Selection
