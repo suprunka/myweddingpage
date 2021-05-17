@@ -1,9 +1,12 @@
-import React from 'react'
-import { Col, Row } from 'reactstrap';
-import { useFormik } from 'formik';
-import { Formik, Form,  Field, ErrorMessage } from 'formik';
+import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+
+import { Col, Row, Spinner } from 'reactstrap';
+import { Formik, Form,  Field } from 'formik';
 import * as Yup from "yup";
-import {addMessage} from "../../services/formService"
+import { addMessage } from '../../redux/actions/pageActions';
+
+
 const FormSchema = Yup.object().shape({
     name: Yup.string()
       .min(2, 'Twoje imię jest za krótkie.')
@@ -15,9 +18,10 @@ const FormSchema = Yup.object().shape({
       .required('To pole jest wymagane.'),
   });
 
-const MessageForm = () =>{
-  
-    
+const MessageForm = () =>{   
+  const dispatch = useDispatch()
+  const buttonDisabled =  useSelector(state => state.page.loading)  
+  console.log(buttonDisabled)
     return(
         <Formik
         initialValues={{
@@ -27,9 +31,9 @@ const MessageForm = () =>{
           }}
         validationSchema={FormSchema}
         onSubmit={values => {
-          // same shape as initial values
-          console.log(values);
-          addMessage(values)
+            dispatch(addMessage(values))
+            
+          
         }}
       >
         {({ errors, touched }) => (
@@ -40,7 +44,7 @@ const MessageForm = () =>{
                     className="contactInput" 
                     type="text" 
                     name="name"/>
-            {errors.name !== undefined && <span className="error">{errors.name}</span>}
+            {errors.name !== undefined && touched.name &&<span className="error">{errors.name}</span>}
             </Col>
         </Row>
         <Row>
@@ -49,7 +53,7 @@ const MessageForm = () =>{
                  className="contactInput" 
                  type="text"
                  name="contact"/>
-            {errors.contact !== undefined && <span className="error">{errors.contact}</span>}
+            {errors.contact !== undefined && touched.contact &&<span className="error">{errors.contact}</span>}
 
             </Col>
         </Row>
@@ -61,12 +65,18 @@ const MessageForm = () =>{
                     className="contactInput" 
                     as={CustimTextarea}
                 ></Field>
-            {errors.text !== undefined && <span className="error">{errors.text}</span>}
+            {errors.text !== undefined && touched.text && <span className="error">{errors.text}</span>}
 
             </Col>
         </Row> <Row>
             <Col>
-            <button className="submitButton" type="submit">Wyslij!</button>
+            <button 
+            disabled={buttonDisabled} 
+            className="submitButton" 
+            type="submit"
+            >
+              {buttonDisabled===true ?  <Spinner size="sm" style={{marginLeft:"10px"}}/>: " Wyślij!"}
+            </button>
             </Col>
         </Row>
         </Form>)}

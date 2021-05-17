@@ -1,7 +1,7 @@
 import axios from "axios"
 export function addMessage(request)
 {
-    axios.post('https://szalone-wesele-api.herokuapp.com/Messages', request, { headers: {
+    axios.post('https://localhost:5001/Messages', request, { headers: {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "*",
       "Access-Control-Allow-Headers":

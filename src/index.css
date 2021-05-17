@@ -624,3 +624,6 @@ background-color: #232121;
     margin-left: 10px;
     color: #b50b0b;
 }
+.submitButton:disabled{
+  background-color: #c7bbb2b5;
+}

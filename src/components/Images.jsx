@@ -73,6 +73,7 @@ function Deck({setDisplayText}) {
   const [props, set] = useSprings(cards.length, i => ({ ...toD(i), from: from(i) })) // Create a bunch of springs using the helpers above
   // Create a gesture, we're interested in down-state, delta (current-pos - click-pos), direction and velocity
   const bind = useGesture(({ args: [index], down, delta: [xDelta], distance, direction: [xDir], velocity }) => {
+   setDisplayText();
     const trigger = velocity > 0.2 // If you flick hard enough it should trigger the card to fly out
     const dir = xDir < 0 ? -1 : 1 // Direction should either point left or right
     if (!down && trigger) gone.add(index) // If button/finger's up and trigger velocity is reached, we flag the card ready to fly out
@@ -88,7 +89,7 @@ function Deck({setDisplayText}) {
   })
   // Now we're just mapping the animated values to our view, that's it. Btw, this component only renders once. :-)
   return props.map(({ x, y, rot, scale }, i) => (
-    <animated.div key={i} onClick={setDisplayText} style={{ transform: to([x, y], (x, y) => `translate3d(${x}px,${y}px,0)`) }}>
+    <animated.div key={i} style={{ transform: to([x, y], (x, y) => `translate3d(${x}px,${y}px,0)`) }}>
       {/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
       <animated.div {...bind(i)} style={{ transform: to([rot, scale], trans), background:`url(${cards[i]}) `, backgroundPosition:"center center",backgroundSize:"cover",backgroundRepeat:"no-repeat" }}  />
     </animated.div>

@@ -18,7 +18,7 @@ const Selection = React.forwardRef((props, ref) => {
     const interval = setInterval(() => {
         setMarcinImg(img => img + 1);
         setPIndex(img => img + 1);
-    }, 2000);
+    }, 3500);
     return () => clearInterval(interval);
   }, []);
 return(

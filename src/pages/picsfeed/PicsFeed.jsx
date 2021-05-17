@@ -3,8 +3,6 @@ import Container from '../../components/Container'
 import way from '../../assets/way.jpg'; // with require
 import Selector from "../../components/Selector"
 import Deck from "../../components/Images"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import icon from "../../assets/icons/swipe.png"
 const Selection =()=> {
     const [displayText, setDisplayText] = useState(true)
