@@ -18,7 +18,7 @@ export const setPageNumber=(pageNumber)=> {
 export const addMessage=(request)=> {
     return (dispatch) => {
         dispatch({ type: types.POST_MESSAGE_REQUEST });     
-        axios.post('https://localhost:5001/Messages', request, { headers: {
+        axios.post('https://szalone-wesele-api.herokuapp.com/messages', request, { headers: {
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Methods": "*",
             "Access-Control-Allow-Headers":
