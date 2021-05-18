@@ -14,7 +14,7 @@ const store = createStore(rootReducer,middleware);
 
 
 if (process.env.NODE_ENV === 'production') {
-  // console.log = () => {}
+  console.log = () => {}
 }
 console.log(process.env.APIKEY, process.env.REACT_APP_APIKEY)
 
