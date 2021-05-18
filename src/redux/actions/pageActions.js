@@ -23,6 +23,7 @@ export const addMessage=(request)=> {
             "Access-Control-Allow-Methods": "*",
             "Access-Control-Allow-Headers":
                 "Origin, Content-Type, X-Auth-Token",
+                "ApiKey":process.env.REACT_APP_APIKEY
         }})
           .then(function (response) {
               console.log("hjwjjwj")
