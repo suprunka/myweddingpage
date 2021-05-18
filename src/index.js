@@ -13,10 +13,10 @@ const middleware = applyMiddleware(thunk);
 const store = createStore(rootReducer,middleware);
 
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.REACT_APP_APIKEY === 'production') {
   // console.log = () => {}
 }
-console.log(process.env.APIKEY)
+console.log(process.env.APIKEY, process.env.APIKEY)
 
 ReactDOM.render(
   <React.StrictMode>
