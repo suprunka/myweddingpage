@@ -36,7 +36,6 @@ const Landing = ()=>{
             <Invitation/>
             <About map={directionsRef}  info={contactRef} />
             <History ref={historyRef} />
-            {/* <News/> */}
             <PicsFeed  /> 
             <Directions  ref={directionsRef} />
             <Contact ref={contactRef} />

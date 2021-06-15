@@ -8,7 +8,7 @@ import {faCameraRetro, faMapSigns,faPhoneSquareAlt} from '@fortawesome/free-soli
 import Contact from '../Contact';
 import Directions from '../map';
 import {isMobile} from 'react-device-detect';
-
+import News from "../News"
 
 const Selection = React.forwardRef((props, ref) => 
 {   
@@ -79,6 +79,8 @@ lepsze Lotto kuponiki.
 <Col className="hoverableIcon" data-aos="zoom-in" data-aos-duration={isMobile?"100":"1000" } onClick={()=>handleClick(5)} sm={6} md={4} xl={4}>
 <FontAwesomeIcon size="4x" icon={faInfoCircle} />
 <p className="imgSignature">Wazne informacje</p>
+
+
 </Col>
 
     
@@ -86,6 +88,7 @@ lepsze Lotto kuponiki.
 <Row>
 
 </Row>
+{clicked ===5 && <News/> }
 {clicked === 3 &&
 <Contact ref={contactRef}/>}
 {clicked === 4 &&

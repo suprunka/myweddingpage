@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Container from '../../components/Container'
-import img20 from '../../assets/pics/32.jpg'; // with require
+import img20 from '../../assets/pics/30m.jpg'; // with require
 import Selector from "../../components/Selector"
 
 const WelcomeSelectionMobile =  React.forwardRef((props, ref) => 
