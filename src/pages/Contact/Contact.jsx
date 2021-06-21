@@ -7,6 +7,8 @@ import patkaimg1 from "../../assets/pics/patka1.jpg"
 import patkaimg2 from "../../assets/pics/patka3.jpg"
 import marcinimg2 from "../../assets/pics/marcin2.jpg"
 import marcinimg1 from "../../assets/pics/marcin1.jpg"
+import logo from "../../assets/logopat.jpg"
+import {isMobile} from 'react-device-detect';
 
 const Selection = React.forwardRef((props, ref) => {
     const [mIndex, setMarcinImg] = useState(0)
@@ -76,6 +78,10 @@ return(
    <Form/>
 </Col>
 </Row>
+{isMobile &&<Row style={{placeContent:"center"}}>
+<img src={logo} alt="" style={{width:"200px", alignSelf:"center"}}/>
+</Row> }
+
 </Selector>
 </div>
 </Container>

@@ -388,6 +388,8 @@ input:focus{
 .signature{
   font-family: Aerotis;
   font-size: 37px;
+      margin: 0px !important;
+
 }
 .p-navbar .icon {
   display: none;
@@ -466,6 +468,8 @@ input:focus{
 
    } 
    .signature >p{
+         margin: 0px !important;
+
    }
  
 }

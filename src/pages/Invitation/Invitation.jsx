@@ -2,6 +2,8 @@ import React from 'react'
 import Container from '../../components/Container';
 import Selector from '../../components/Selector';
 import logo from "../../assets/logopat.jpg"
+import {isMobile} from 'react-device-detect';
+
 const Invitation = ()=>
 <Container backgroundColor="#fefdfb" className="height-fitCnt">
  <Selector className="invitation ">
@@ -17,12 +19,16 @@ radość tej niezwykłej chwili serdecznie zapraszamy.
 </p>
 
 <p>
-Po ślubie widzimy Was na przyjeciu w Sali weselnej „Gościniec za Borem”
+Po ślubie widzimy się na przyjeciu w Sali weselnej „Gościniec za Borem”
 w Zaborowicach.
 </p>
+<b>
+     BĘDĄ TAKŻE POPRAWINY!
+     <p style={{fontSize:"14px"}}> Zapraszamy najbliższych przyjaciół i rodzinę na obiad, który odbędzie się na sali w Zaborowicach.</p>
+</b>
 
+{!isMobile && <img src={logo} alt="" style={{width:"200px", alignSelf:"center"}}/>}
 
-<img src={logo} style={{width:"200px", alignSelf:"center"}}/>
 
    
 </Selector>
