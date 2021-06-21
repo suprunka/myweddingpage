@@ -22,7 +22,7 @@ w Zaborowicach.
 </p>
 
 
-<img src={logo} style={{width:"200px"}}/>
+<img src={logo} style={{width:"200px", alignSelf:"center"}}/>
 
    
 </Selector>

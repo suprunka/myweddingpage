@@ -419,6 +419,7 @@ input:focus{
 }
 .invitation{
   text-align-last: center;
+  align-items: center;
 
 }
 
