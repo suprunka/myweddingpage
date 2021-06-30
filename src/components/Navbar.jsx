@@ -42,7 +42,7 @@ const Navbar = ({list}) =>{
                                 <p className="par-navbar" style={{ marginTop: "10px", textTransform: "uppercase"}}> {item.label}</p> 
                             </li>
                 )}
-                <li  class="icon" onClick={handleMenuBarClick} >
+                <li  className="icon" onClick={handleMenuBarClick} >
                 <FontAwesomeIcon  icon={faBars} />
                 </li>
     </ul>

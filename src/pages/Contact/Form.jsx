@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Col, Row, Spinner } from 'reactstrap';
 import { Formik, Form,  Field } from 'formik';
 import * as Yup from "yup";
-import { addMessage } from '../../redux/actions/pageActions';
+import { addMessage, cleanMessageStatus } from '../../redux/actions/pageActions';
 
 
 const FormSchema = Yup.object().shape({
@@ -14,14 +14,13 @@ const FormSchema = Yup.object().shape({
     contact: Yup.string()
       .required('Wpisz jakiś kontakt do siebie- będzie nam łatwiej się z tobą skontaktować.'),
       text: Yup.string()
-      .min(5, 'Twoja wiadomość jest za krótka.')
+      .min(3, 'Twoja wiadomość jest za krótka.')
       .required('To pole jest wymagane.'),
   });
 
 const MessageForm = () =>{   
   const dispatch = useDispatch()
   const buttonDisabled =  useSelector(state => state.page.loading)  
-  console.log(buttonDisabled)
     return(
         <Formik
         initialValues={{
@@ -30,9 +29,9 @@ const MessageForm = () =>{
             text:""
           }}
         validationSchema={FormSchema}
-        onSubmit={values => {
+        onSubmit={(values, { resetForm }) => {
             dispatch(addMessage(values))
-            
+            resetForm()
           
         }}
       >

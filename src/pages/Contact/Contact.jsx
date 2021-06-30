@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Row, Col } from 'reactstrap'
+import { Row, Col, Modal } from 'reactstrap'
 import Container from '../../components/Container'
 import Selector from "../../components/Selector"
 import Form from './Form';
@@ -9,12 +9,17 @@ import marcinimg2 from "../../assets/pics/marcin2.jpg"
 import marcinimg1 from "../../assets/pics/marcin1.jpg"
 import logo from "../../assets/logopat.jpg"
 import {isMobile} from 'react-device-detect';
-
+import { useDispatch } from 'react-redux';
+import { cleanMessageStatus } from '../../redux/actions/pageActions';
+import MessageSentModal from "./MessageSentModal"
+import { useSelector } from 'react-redux';
 const Selection = React.forwardRef((props, ref) => {
     const [mIndex, setMarcinImg] = useState(0)
     const [pIndex, setPIndex] = useState(0)
     const marcinImgs = [ marcinimg2, marcinimg1]
     const patkaImgs = [patkaimg1, patkaimg2]
+    const messageSentSuccess = useSelector(state => state.page.messageSentSuccess)
+  const dispatch = useDispatch()
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,6 +28,18 @@ const Selection = React.forwardRef((props, ref) => {
     }, 3500);
     return () => clearInterval(interval);
   }, []);
+
+const handleInputChange= ()=>{
+ dispatch(cleanMessageStatus())
+}
+useEffect(()=>{
+    if(isMobile){
+        const timeOutId = setTimeout(() => dispatch(cleanMessageStatus()), 3500);
+        return () => clearTimeout(timeOutId);
+    }
+},[messageSentSuccess])
+
+  console.log(messageSentSuccess)
 return(
 <React.Fragment>
 
@@ -75,12 +92,15 @@ return(
     <h4 className="pt-4 text-center" data-aos="fade-right"  style={{color:"#e48432"}}>
         W RAZIE PYTAŃ PISZ DO NAS
     </h4>
-   <Form/>
+    {messageSentSuccess && isMobile && <p>Wiadomość została wysłana, odezwiemy się jak najszybciej.🤩</p>}
+
+   <Form onInputChange={handleInputChange}/>
 </Col>
 </Row>
 {isMobile &&<Row style={{placeContent:"center"}}>
 <img src={logo} alt="" style={{width:"200px", alignSelf:"center"}}/>
 </Row> }
+{messageSentSuccess && !isMobile && <MessageSentModal toggle={()=>dispatch(cleanMessageStatus())}/>}
 
 </Selector>
 </div>
