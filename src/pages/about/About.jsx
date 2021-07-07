@@ -41,6 +41,7 @@ return(
  <Selector  >
 
 <Row id="aboutSection">
+
 <Col className="hoverableIcon" data-aos="zoom-in" data-aos-duration={isMobile?"100":"1000" } onClick={()=>handleClick(0)} sm={6} md={4}  xl={4}>
 
 <FontAwesomeIcon size="4x" icon={faUsers} />

@@ -11,6 +11,12 @@ const Directions = React.forwardRef((props, ref) =>
     >
     <div ref={ref}  className="biggerPadding" >
 
+<div style={{margin:"2rem"}}>
+        <h3>Weselna playlista</h3>
+        <p>Dodaj piosenki, które chcesz usłyszeć!</p>
+        <iframe src="https://open.spotify.com/embed/playlist/4nInvK0wSpGQlgOpA12zN4" width="100%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+</div>
     <Row  >
     <Col sm={12} md={6}>
             <Row>
