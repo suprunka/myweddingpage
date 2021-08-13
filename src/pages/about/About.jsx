@@ -46,12 +46,6 @@ return(
 
 <Row id="aboutSection">
 
-<Col className="hoverableIcon" data-aos="zoom-in" data-aos-duration={isMobile?"100":"1000" } onClick={()=>handleClick(0)} sm={6} md={4}  xl={4}>
-
-<FontAwesomeIcon size="4x" icon={faUsers} />
-<p className="imgSignature">Usiedzenie gości przy stołach</p>
-
-</Col> 
 <Col className="hoverableIcon" data-aos="zoom-in"  data-aos-duration={isMobile?"100":"1000" } key={1} onClick={()=>handleClick(1)} sm={6} md={4} xl={4}>
 <FontAwesomeIcon size="4x" icon={faCameraRetro} />
 <p className="imgSignature">Zdjęcia z wesela</p>
@@ -87,6 +81,12 @@ lepsze Lotto kuponiki.
 
 </Col>
 
+<Col className="hoverableIcon" data-aos="zoom-in" data-aos-duration={isMobile?"100":"1000" } onClick={()=>handleClick(0)} sm={6} md={4}  xl={4}>
+
+<FontAwesomeIcon size="4x" icon={faUsers} />
+<p className="imgSignature">Usiedzenie gości przy stołach</p>
+
+</Col> 
     
 </Row>
 <Row>
