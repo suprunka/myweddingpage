@@ -9,6 +9,10 @@ import Contact from '../Contact';
 import Directions from '../map';
 import {isMobile} from 'react-device-detect';
 import News from "../News"
+import stol1 from "../../assets/stol20.jpg"
+import stol2 from "../../assets/stol21.jpg"
+import stol3 from "../../assets/stol22.jpg"
+import stol4 from "../../assets/stol23.jpg"
 
 const Selection = React.forwardRef((props, ref) => 
 {   
@@ -46,8 +50,7 @@ return(
 
 <FontAwesomeIcon size="4x" icon={faUsers} />
 <p className="imgSignature">Usiedzenie gości przy stołach</p>
-{clicked === 0 &&
-<p className="aboutBottom">Usiedzenie gości przy stołach zostanie dodane tydzień przed przyjeciem.</p>}
+
 </Col> 
 <Col className="hoverableIcon" data-aos="zoom-in"  data-aos-duration={isMobile?"100":"1000" } key={1} onClick={()=>handleClick(1)} sm={6} md={4} xl={4}>
 <FontAwesomeIcon size="4x" icon={faCameraRetro} />
@@ -89,6 +92,23 @@ lepsze Lotto kuponiki.
 <Row>
 
 </Row>
+{clicked === 0 &&
+<Row>
+<Col xs="12" sm="6" lg="6">
+<img style={{width:"100%"}} src={stol1}/>
+</Col>
+<Col  xs="12" sm="6" lg="6">
+<img style={{width:"100%"}} src={stol2}/>
+</Col>
+<Col  xs="12" sm="6" lg="6">
+<img style={{width:"100%"}} src={stol3}/>
+</Col>
+<Col  xs="12" sm="6" lg="6">
+<img style={{width:"100%"}} src={stol4}/>
+</Col>
+
+</Row>
+}
 {clicked ===5 && <News/> }
 {clicked === 3 &&
 <Contact ref={contactRef}/>}
