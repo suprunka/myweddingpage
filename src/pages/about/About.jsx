@@ -50,20 +50,9 @@ return(
 <FontAwesomeIcon size="4x" icon={faCameraRetro} />
 <p className="imgSignature">Zdjęcia z wesela</p>
 {clicked === 1 &&
-<p className="aboutBottom">Zdjęcia będą chronione hasłem. Dodamy je, jak tylko je dostaniemy. Badź cierpliwy!</p>}
+<p className="aboutBottom"> <a href="https://www.dropbox.com/sh/43slsz6w6r6zux5/AADY0UyzfRUqxBrEOKwrXKBRa?dl=0">Kliknij w link by zobaczyc zdjecia!</a></p>}
 </Col>
-<Col className="hoverableIcon" data-aos="zoom-in"  data-aos-duration={isMobile?"100":"1000" } onClick={()=>handleClick(2)} sm={6} md={4} xl={4}>
-<FontAwesomeIcon size="4x" icon={faGift} />
-<p className="imgSignature">Prezenty</p>
-{clicked === 2 &&
-<p className="aboutBottom">
-Drodzy goście, Państwo mili
-Byście radość nam sprawili,
-Po co dźwigać bukieciki,
-lepsze Lotto kuponiki.
-</p>}
 
-</Col>
 
 <Col className="hoverableIcon" data-aos="zoom-in" data-aos-duration={isMobile?"100":"1000" } onClick={()=>handleClick(4)} sm={6} md={4} xl={4}>
 <FontAwesomeIcon size="4x" icon={faMapSigns} />
@@ -74,20 +63,7 @@ lepsze Lotto kuponiki.
 <FontAwesomeIcon size="4x" icon={faPhoneSquareAlt} />
 <p className="imgSignature">Kontakt</p>
 </Col>
-<Col className="hoverableIcon" data-aos="zoom-in" data-aos-duration={isMobile?"100":"1000" } onClick={()=>handleClick(5)} sm={6} md={4} xl={4}>
-<FontAwesomeIcon size="4x" icon={faInfoCircle} />
-<p className="imgSignature">Wazne informacje</p>
 
-
-</Col>
-
-<Col className="hoverableIcon" data-aos="zoom-in" data-aos-duration={isMobile?"100":"1000" } onClick={()=>handleClick(0)} sm={6} md={4}  xl={4}>
-
-<FontAwesomeIcon size="4x" icon={faUsers} />
-<p className="imgSignature">Usiedzenie gości przy stołach</p>
-
-</Col> 
-    
 </Row>
 <Row>
 
