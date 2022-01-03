@@ -47,10 +47,10 @@ return(
 <Row id="aboutSection">
 
 <Col className="hoverableIcon" data-aos="zoom-in"  data-aos-duration={isMobile?"100":"1000" } key={1} onClick={()=>handleClick(1)} sm={6} md={4} xl={4}>
+     <a style="color:#eae6e1" href="https://www.dropbox.com/sh/43slsz6w6r6zux5/AADY0UyzfRUqxBrEOKwrXKBRa?dl=0">
 <FontAwesomeIcon size="4x" icon={faCameraRetro} />
 <p className="imgSignature">Zdjęcia z wesela</p>
-{clicked === 1 &&
-<p className="aboutBottom"> <a href="https://www.dropbox.com/sh/43slsz6w6r6zux5/AADY0UyzfRUqxBrEOKwrXKBRa?dl=0">Kliknij w link by zobaczyc zdjecia!</a></p>}
+</a>
 </Col>
 
 
